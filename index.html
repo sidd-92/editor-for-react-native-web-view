@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>Editor</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
     <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
     <script
@@ -16,10 +19,6 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
     <style>
       body {
         font-family: "Merriweather", serif;
@@ -28,10 +27,20 @@
   </head>
   <body>
     <div id="editor">This is some sample content.</div>
-    <button class="bg-green-200 p-2 border border-green-600" id="submit">
+    <button
+      id="submit"
+      style="
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        font-size: 18px;
+        width: 100%;
+      "
+    >
       Submit
     </button>
-    <div id="content"></div>
+    <p style="margin-top: 20px">Your Content Will Be Visibile Below:</p>
+    <div style="height: 200px; overflow: scroll" id="content"></div>
     <script>
       let editor;
       ClassicEditor.create(document.querySelector("#editor"), {
