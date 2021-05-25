@@ -32,6 +32,10 @@ ClassicEditor.create(document.querySelector("#editor"), {
 
 document.querySelector("#submit").addEventListener("click", () => {
   document.querySelector("#content").innerHTML = editor.getData();
+  console.log("REACT NATIVE WEB VIEW", window.ReactNativeWebView);
+  if (window.ReactNativeWebView) {
+    window.ReactNativeWebView.postMessage(editor.getData());
+  }
 
   console.log(editor.getData());
 });
