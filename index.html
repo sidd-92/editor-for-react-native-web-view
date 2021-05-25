@@ -8,6 +8,14 @@
       content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+    <script>
+      console.log("REACT NATIVE WEB VIEW", window.ReactNativeWebView);
+      if (window.ReactNativeWebView) {
+        setTimeout(function () {
+          window.ReactNativeWebView.postMessage("Hello!");
+        }, 2000);
+      }
+    </script>
     <!-- <script
       src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
       integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
