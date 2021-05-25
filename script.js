@@ -32,5 +32,6 @@ ClassicEditor.create(document.querySelector("#editor"), {
 
 document.querySelector("#submit").addEventListener("click", () => {
   document.querySelector("#content").innerHTML = editor.getData();
+
   console.log(editor.getData());
 });
