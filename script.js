@@ -30,8 +30,7 @@ ClassicEditor.create(document.querySelector("#editor"), {
     console.error(error);
   });
 
-document.querySelector("#submit").addEventListener("click", () => {
-  document.querySelector("#content").innerHTML = editor.getData();
+function returnData() {
   var plainText = $(editor.getData()).text();
   console.log("Plain TEXT", plainText);
   console.log("REACT NATIVE WEB VIEW", window.ReactNativeWebView);
@@ -39,4 +38,4 @@ document.querySelector("#submit").addEventListener("click", () => {
     window.ReactNativeWebView.postMessage(plainText);
   }
   console.log("HTML", editor.getData());
-});
+}
