@@ -39,3 +39,7 @@ function returnData() {
   }
   console.log("HTML", editor.getData());
 }
+
+document.querySelector("#submit").addEventListener("click", () => {
+  returnData();
+});
