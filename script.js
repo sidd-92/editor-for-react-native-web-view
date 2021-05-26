@@ -32,10 +32,11 @@ ClassicEditor.create(document.querySelector("#editor"), {
 
 document.querySelector("#submit").addEventListener("click", () => {
   document.querySelector("#content").innerHTML = editor.getData();
+  var plainText = $(editor.getData()).text();
+  console.log("Plain TEXT", plainText);
   console.log("REACT NATIVE WEB VIEW", window.ReactNativeWebView);
   if (window.ReactNativeWebView) {
-    window.ReactNativeWebView.postMessage(editor.getData());
+    window.ReactNativeWebView.postMessage(plainText);
   }
-
-  console.log(editor.getData());
+  console.log("HTML", editor.getData());
 });
