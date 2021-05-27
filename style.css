@@ -10,3 +10,7 @@ body {
   font-size: 18px;
   width: 100%;
 }
+.ck-editor__editable {
+  min-height: 150px !important;
+  max-height: 400px !important;
+}
