@@ -36,7 +36,9 @@ function returnData() {
   console.log("Plain TEXT", plainText);
   console.log("REACT NATIVE WEB VIEW", window.ReactNativeWebView);
   if (window.ReactNativeWebView) {
-    window.ReactNativeWebView.postMessage({ text: plainText, html: htmldata });
+    window.ReactNativeWebView.postMessage(
+      JSON.stringify({ text: plainText, html: htmldata })
+    );
   }
   console.log("HTML", editor.getData());
 }
